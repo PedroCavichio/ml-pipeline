@@ -1,1 +1,7 @@
+import pandas as pd
 
+try:
+    df = pd.read_csv("data/sample.csv")
+except pd.errors.EmptyDataError:
+    print("O CSV está vazio ou não foi encontrado!")
+    df = None
